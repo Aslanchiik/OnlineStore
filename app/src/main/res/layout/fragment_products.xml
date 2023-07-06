@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_color"
+    android:fillViewport="true"
+    tools:context=".presentation.ui.fragments.products.ProductsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/first_guid"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/first_guid"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/products_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/product_title_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/card_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_image"
+            tools:text="Strawberry" />
+
+        <ImageView
+            android:id="@+id/best_price_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_price_check_24"
+            app:layout_constraintLeft_toLeftOf="@+id/product_title_txt"
+            app:layout_constraintTop_toBottomOf="@+id/product_title_txt" />
+
+        <TextView
+            android:id="@+id/price_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@+id/best_price_image"
+            app:layout_constraintTop_toTopOf="@+id/best_price_image" />
+
+        <ImageView
+            android:id="@+id/category_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_category_24"
+            app:layout_constraintLeft_toLeftOf="@id/product_title_txt"
+            app:layout_constraintTop_toBottomOf="@+id/best_price_image" />
+
+        <TextView
+            android:id="@+id/category_choose_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@+id/category_image"
+            app:layout_constraintTop_toTopOf="@+id/category_image" />
+
+        <ImageView
+            android:id="@+id/rate_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_star_rate_24"
+            app:layout_constraintLeft_toLeftOf="@id/category_image"
+            app:layout_constraintTop_toBottomOf="@+id/category_image" />
+
+        <TextView
+            android:id="@+id/rate_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@+id/rate_image"
+            app:layout_constraintTop_toTopOf="@+id/rate_image" />
+
+        <TextView
+            android:id="@+id/description_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Description:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@+id/category_image"
+            app:layout_constraintTop_toBottomOf="@+id/rate_image" />
+
+        <TextView
+            android:id="@+id/description_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/description_title_txt"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_title_txt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
